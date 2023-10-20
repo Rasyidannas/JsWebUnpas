@@ -1,0 +1,68 @@
+html{
+    box-sizing: border-box;
+}
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    background-color: #ccc;
+    text-align: center;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+.container{
+    width: 610px;
+    margin: 10px auto;
+    border: 5px solid white;
+
+}
+
+.thumbnail{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.thumbnail figure{
+    flex: 0 0 33.3%;
+    overflow: hidden;
+    background-color: black;
+}
+
+.thumb{
+    opacity: 0.6;
+    transform: scale(1.07);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.thumb:hover{
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1);
+}
+
+.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+/* animation */
+@keyframes fadeIn{
+    to {
+        opacity: 1;
+    }
+}
+
+.fade{
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
